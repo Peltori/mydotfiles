@@ -162,6 +162,10 @@ label:focus {
     background-color: #ffa000;
 }
 
+#custom-icon {
+    font-size: 20px;
+}
+
 #tray {
     background-color: rgba(255, 248, 220, 0.0);
 }
