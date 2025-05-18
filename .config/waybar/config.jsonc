@@ -110,6 +110,11 @@
             "(.*) - Vivaldi": "🌎 $1"
         },
         "separate-outputs": true
+    },
+
+    "custom/icon": {
+        "format": " ",
+        "tooltip": false
     }
 
 /*     "custom/media": {
