@@ -2,7 +2,7 @@
 
 ### Feel free to use these as you want
 
-Files contain some extra comments to help new people out and essentially the configs are the default ones</b>
+Files contain some extra comments to help new people out and essentially the configs are the default ones.</b>
 
 But with some modifications made to them.</b>
 
@@ -12,7 +12,7 @@ Updated the look and feel just a bit and made different conf files for different
 
 Also if you want to use the same oh-my-zsh theme i have here then you would need to follow [oh-my-zsh](https://ohmyz.sh) wiki for how to install oh-my-zsh etc.</b>
 
-Then you will need to look into the custom folder where i have modifed the "agnoster" theme. In the wiki you have instructions on how to use custom themes. Basically you just copy the contents of this repos custom folder to your installations </b> 
+Then you will need to look into the custom folder where i have modifed the "agnoster" theme. In the wiki you have instructions on how to use custom themes. Basically you just copy the contents of this repos custom folder to your installations.</b> 
 
 ### Pictures
 
