@@ -1,6 +1,6 @@
 * {
     font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 window#waybar {
@@ -90,6 +90,10 @@ button:hover {
 #clock {
     background-color: rgba(255, 248, 220, 0.0);
     margin-right: 10px;
+    padding: 0 10px;
+}
+
+#memory {
     padding: 0 10px;
 }
 
