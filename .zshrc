@@ -4,7 +4,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="/home/peltori/Downloads/repos/dotfiles/custom"
-
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -71,11 +71,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+  kubectl
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,3 +109,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias osrs="cd Games/osrs && ./RuneLite.AppImage"
+
+backup-fedora() {
+  sudo rsync -azXvP --delete \
+  --exclude-from="/home/peltori/exclude-file.txt" \
+  -e "ssh -i /home/peltori/.ssh/rasperry_p -p 2981" \
+   / peltori@192.168.1.121:/mnt/T7/backups/fedora "$@"
+}
+# this is for the zsh syntax highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
