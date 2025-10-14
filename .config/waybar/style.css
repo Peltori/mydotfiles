@@ -1,5 +1,5 @@
 * {
-    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-family: 'RobotoMonoNerdFont', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
     font-size: 14px;
 }
 
@@ -76,10 +76,10 @@ button:hover {
     margin: 0 4px;
 }
 
-#disk,
+#disk,/* not in use */
 #pulseaudio,
-#wireplumber,
-#custom-media,
+#wireplumber,/* not in use */
+#custom-media,/* not in use */
 #tray,
 #mpd {
     padding: 0 10px;
@@ -91,6 +91,11 @@ button:hover {
     background-color: rgba(255, 248, 220, 0.0);
     margin-right: 10px;
     padding: 0 10px;
+}
+
+#custom-power {
+    background-color: rgba(255, 248, 220, 0.0);
+    margin-right: 10px;
 }
 
 #memory {
@@ -123,7 +128,7 @@ label:focus {
     background-color: #000000;
 }
 
-/* 
+/*
 #disk {
     background-color: #964B00;
 }
@@ -155,6 +160,7 @@ label:focus {
 #custom-icon {
     font-size: 20px;
     color: rgb(60, 110, 180);
+    padding-left: 8px;
 }
 
 #tray {
@@ -177,7 +183,7 @@ label:focus {
     min-width: 100px;
 }
 
- #custom-media.custom-spotify {
+#custom-media.custom-spotify {
     background-color: #66cc99;
 }
 

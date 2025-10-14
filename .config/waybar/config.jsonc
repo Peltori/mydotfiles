@@ -22,60 +22,34 @@
 
     // Modules configuration
     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}: {icon}",
-         "format-icons": {
-             "1": "󰓓",
-             "2": "󱎓",
-             "3": "",
-             "4": "",
-             "5": "󰨞",
-             "6": "󰖟",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
-     },
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "󰓓",
+            "2": "󱎓",
+            "3": "",
+            "4": "",
+            "5": "󰨞",
+            "6": "󰖟",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
 
-     "group/right": {
+    "group/right": {
         "orientation": "horizontal",
         "modules": [
             "tray",
             "pulseaudio",
             "memory",
-            "clock"
+            "clock",
+            "custom/power"
         ]
-     },
-/*
-     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
     },
-*/
+
     "tray": {
         "icon-size": 15,
         "spacing": 10
@@ -122,8 +96,15 @@
     "custom/icon": {
         "format": " ",
         "tooltip": false
-    }
+    },
 
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"on-click": "wlogout",
+        "on-click-right": "hyprlock",
+        "escape": true
+    }
 /*     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
@@ -136,23 +117,38 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
- 
+
     "custom/icon": {
         "format": " ",
         "tooltip": false
     },
-
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
+*/
+/*
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
 */
 }
