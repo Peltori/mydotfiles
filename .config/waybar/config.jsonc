@@ -33,9 +33,9 @@
             "4": "",
             "5": "󰨞",
             "6": "󰖟",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "urgent": "󰀨",
+            "focused": "",
+            "default": ""
         }
     },
 
@@ -88,7 +88,8 @@
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
-            "(.*) - Vivaldi": "🌎 $1"
+            "(.*) — LibreWolf": "󰖟  [$1]",
+            "(.*) - Visual Studio Code": "󰨞  [$1]"
         },
         "separate-outputs": true
     },
