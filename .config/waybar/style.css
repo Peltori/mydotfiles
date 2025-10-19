@@ -128,12 +128,6 @@ label:focus {
     background-color: #000000;
 }
 
-/*
-#disk {
-    background-color: #964B00;
-}
-*/
-
 #pulseaudio:hover {
     background-color: #696969;
 }
@@ -208,5 +202,9 @@ label:focus {
 
 #mpd.paused {
     background-color: #51a37a;
+}
+
+#disk {
+    background-color: #964B00;
 }
 */
