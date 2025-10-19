@@ -56,9 +56,9 @@
     },
     "clock": {
     "interval": 60,
-    "format": "{:%a %d.%m.%Y %H:%M}",
+    "format": "{:%a |  %d.%m.%Y |  %H:%M}",
     "timezone": "Europe/Helsinki",
-    "tooltip-format": "<span size='large' font_family='monospace'>{calendar}</span>",
+    "tooltip-format": "<span size='large' font_family='RobotoMonoNerdFont'>{calendar}</span>",
     "calendar": {
         "mode": "year",
         "mode-mon-col": 3,
@@ -81,11 +81,11 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon}  {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
