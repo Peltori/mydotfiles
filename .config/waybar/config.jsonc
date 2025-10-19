@@ -12,12 +12,13 @@
 
     // Choose the order of the modules
     "modules-left": [
-        "custom/icon",
-        "hyprland/workspaces"
+        "group/left"
     ],
+
     "modules-center": [
         "hyprland/window"
     ],
+
     "modules-right": [ "group/right"],
 
     // Modules configuration
@@ -39,6 +40,14 @@
         }
     },
 
+    "group/left": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/icon",
+            "hyprland/workspaces"
+        ]
+    },
+
     "group/right": {
         "orientation": "horizontal",
         "modules": [
@@ -54,6 +63,7 @@
         "icon-size": 15,
         "spacing": 10
     },
+
     "clock": {
     "interval": 60,
     "format": "{:%a |  %d.%m.%Y |  %H:%M}",
