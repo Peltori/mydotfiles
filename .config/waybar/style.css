@@ -1,5 +1,5 @@
 * {
-    font-family: 'RobotoMonoNerdFont', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-family: 'RobotoMono Nerd Font', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Noto Sans Mono', monospace;
     font-size: 14px;
 }
 
@@ -14,15 +14,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -31,6 +22,15 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -67,44 +67,55 @@ button:hover {
     background-color: #eb4d4b;
 }
 
-#window,
-#workspaces {
+#left, #window, #right {
     border: 3px solid rgba(255, 248, 220, 0.8);
     border-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+}
+
+#left {
+    border: 3px solid rgba(255, 248, 220, 0.8);
+    border-radius: 15px;
+    padding: 0 10px;
     margin: 0 4px;
 }
 
-#disk,/* not in use */
-#wireplumber,/* not in use */
-#custom-media,/* not in use */
-#pulseaudio,
-#tray,
-#mpd {
-    padding: 0 10px;
-    color: rgb(255, 240, 179);
-
+#left #workspaces {
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
-#clock {
-    background-color: rgba(255, 248, 220, 0.0);
-    margin-right: 10px;
-    padding: 0 10px;
+#left   {
+    margin-right: 4px;
 }
-
-#custom-power {
-    background-color: rgba(255, 248, 220, 0.0);
-    margin-right: 10px;
+#window {
+    margin: 0 4px;
 }
-
-#memory {
-    padding: 0 10px;
-}
-
 #right {
-    border: 3px solid rgba(255, 248, 220, 0.8);
-    border-radius: 15px;
+    margin-left: 4px;
+}
+
+#left, #right {
+    padding: 0 10px;
+}
+#window {
+    padding-left: 10px; padding-right: 10px;
+}
+
+#left #workspaces {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#left #custom-icon {
+    margin-right: 6px;
+}
+
+#left, #window, #right,
+#tray, #clock, #memory, #pulseaudio, #custom-power {
+    background-color: transparent;
+    color: rgb(255, 240, 179);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -126,6 +137,16 @@ button:hover {
 
 label:focus {
     background-color: #000000;
+}
+
+#mpd, /* not in use*/
+#disk,/* not in use */
+#wireplumber,/* not in use */
+#custom-media,/* not in use */
+#pulseaudio,
+#memory,
+#tray {
+    padding: 0 10px;
 }
 
 #pulseaudio:hover {
@@ -152,9 +173,13 @@ label:focus {
 }
 
 #custom-icon {
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(60, 110, 180);
     padding-left: 8px;
+}
+
+#custom-power {
+    padding-left: 10px;
 }
 
 #tray {
