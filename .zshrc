@@ -77,7 +77,7 @@ plugins=(git
 
 # --- my prompt palette (matches Waybar/Hypr) ---
 ZSH_BASE='#0C0C10'
-ZSH_SURFACE='#191B23'
+ZSH_SURFACE='#191a31'
 ZSH_OVERLAY='#282A37'
 ZSH_TEXT='#E8E6E1'
 ZSH_ACCENT='#C8AA64'           # gold
