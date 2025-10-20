@@ -1,11 +1,13 @@
+@import url("colors.css");
+
 * {
     font-family: 'RobotoMono Nerd Font', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Noto Sans Mono', monospace;
     font-size: 14px;
 }
 
 window#waybar {
-    background-color: rgba(255, 248, 220, 0.0);
-    color: rgb(255, 240, 179);
+    background-color: transparent;
+    color: @text;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -15,11 +17,11 @@ window#waybar.hidden {
 }
 
 window#waybar.termite {
-    background-color: #3F3F3F;
+    background-color: @surface;
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: @base;
     border: none;
 }
 
@@ -43,7 +45,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px @text;
 }
 
 /* you can set a style on hover for any module like this */
@@ -51,29 +53,29 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: rgb(255, 240, 179);
+    color: @text;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: @overlay;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: @overlay;
+    box-shadow: inset 0 -3px @text;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @danger;
 }
 
 #left, #window, #right {
-    border: 3px solid rgba(255, 248, 220, 0.8);
+    border: 3px solid @accent;
     border-radius: 15px;
 }
 
 #left {
-    border: 3px solid rgba(255, 248, 220, 0.8);
+    border: 3px solid @accent;
     border-radius: 15px;
     padding: 0 10px;
     margin: 0 4px;
@@ -115,7 +117,7 @@ button:hover {
 #left, #window, #right,
 #tray, #clock, #memory, #pulseaudio, #custom-power {
     background-color: transparent;
-    color: rgb(255, 240, 179);
+    color: @text;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -136,7 +138,7 @@ button:hover {
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: @base;
 }
 
 #mpd, /* not in use*/
@@ -150,26 +152,26 @@ label:focus {
 }
 
 #pulseaudio:hover {
-    background-color: #696969;
+    background-color: @overlay;
 }
 
 #pulseaudio {
-    background-color: rgba(255, 248, 220, 0.0);
-    color: rgb(255, 240, 179);
+    background-color: transparent;
+    color: @text;
 }
 
 #pulseaudio.muted {
-    background-color: rgba(255, 248, 220, 0.0);
-    color: rgb(255, 240, 179);
+    background-color: transparent;
+    color: @text;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: @surface;
+    color: @base;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: @danger;
 }
 
 #custom-icon {
@@ -183,7 +185,7 @@ label:focus {
 }
 
 #tray {
-    background-color: rgba(255, 248, 220, 0.0);
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -192,7 +194,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @danger;
 }
 
 /*

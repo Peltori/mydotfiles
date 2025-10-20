@@ -1,0 +1,8 @@
+@define-color base           #0C0C10;
+@define-color surface        #191B23;
+@define-color overlay        #282A37;
+@define-color text           #E8E6E1;
+@define-color accent         #C8AA64;   /* kulta */
+@define-color accent-inactive #5A4632;  /* himmeä pronssi */
+@define-color highlight      #9B6EDC;   /* violetti */
+@define-color danger         #BE4646;
