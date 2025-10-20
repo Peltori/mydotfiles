@@ -160,3 +160,10 @@ backup-fedora() {
 }
 # this is for the zsh syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# override syntax highlighting colors
+ZSH_HIGHLIGHT_STYLES[command]='fg=#C8AA64'      # kultainen hyväksytty komento
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#9B6EDC' # violetit varatut sanat
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#E8E6E1'         # alias vaalea
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#E8E6E1'       # builtin komennot vaalea
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#BE4646' # virheellinen komento punaisena
