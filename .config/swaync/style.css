@@ -1,0 +1,133 @@
+:root {
+  /* Tokyo Night Warm Palette */
+  --cc-bg: rgba(25, 27, 35, 0.9);
+  --noti-border-color: rgba(90, 70, 50, 0.4);
+  --noti-bg: 25, 27, 35;
+  --noti-bg-alpha: 0.92;
+  --noti-bg-darker: rgba(12, 12, 16, 1.0);
+  --noti-bg-hover: rgba(40, 42, 55, 1.0);
+  --noti-bg-focus: rgba(40, 42, 55, 0.9);
+  --noti-close-bg: rgba(90, 70, 50, 0.6);
+  --noti-close-bg-hover: rgba(200, 170, 100, 0.7);
+  --text-color: rgba(232, 230, 225, 1.0);
+  --text-color-disabled: rgba(120, 120, 120, 1.0);
+  --bg-selected: rgba(155, 110, 220, 0.9);
+  --accent: rgba(200, 170, 100, 1.0);
+  --accent_inactive: rgba(90, 70, 50, 1.0);
+  --highlight: rgba(155, 110, 220, 1.0);
+  --danger: rgba(190, 70, 70, 1.0);
+
+  /* Animaatiot ja hover-transitionit */
+  --hover-tranistion: background 0.15s ease-in-out;
+  --group-collapse-tranistion: opacity 400ms ease-in-out;
+  --hover-transition: var(--hover-tranistion);
+  --group-collapse-transition: var(--group-collapse-tranistion);
+
+  /* Yleisasetukset */
+  --border-radius: 12px;
+  --border: 1px solid var(--noti-border-color);
+  --font-size-body: 15px;
+  --font-size-summary: 16px;
+  --notification-shadow: 0 2px 8px 2px rgba(0,0,0,0.6);
+
+  font-family: "JetBrainsMono Nerd Font", "RobotoMono Nerd Font";
+  font-size: 14px;
+}
+
+/* Fallback for older CSS themes (GTK3 @define-color) */
+@define-color cc-bg rgba(25, 27, 35, 0.90);
+@define-color noti-border-color rgba(90, 70, 50, 0.40);
+@define-color noti-bg rgba(25, 27, 35, 0.92);
+@define-color noti-bg-opaque rgb(25, 27, 35);
+@define-color noti-bg-darker rgb(12, 12, 16);
+@define-color noti-bg-hover rgb(40, 42, 55);
+@define-color noti-bg-hover-opaque rgb(40, 42, 55);
+@define-color noti-bg-focus rgba(40, 42, 55, 0.85);
+@define-color noti-close-bg rgba(90, 70, 50, 0.60);
+@define-color noti-close-bg-hover rgba(200, 170, 100, 0.70);
+@define-color text-color rgb(232, 230, 225);
+@define-color text-color-disabled rgb(140, 140, 140);
+@define-color bg-selected rgb(155, 110, 220);
+notificationwindow, blankwindow, blankwindow { background: transparent; }
+
+/* --- Control Center (panel) --- */
+.control-center {
+  background: var(--cc-bg);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  border: 3px solid var(--accent_inactive);
+  /*box-shadow: 0 0 20px rgba(0,0,0,0.6);*/
+  padding: 8px;
+}
+
+/* --- Notification cards --- */
+
+.notification-row .notification-background {
+  padding: 8px 12px;
+  margin: 3px;
+  background: transparent;
+}
+
+.notification-row .notification-background .notification {
+  background: rgba(var(--noti-bg), var(--noti-bg-alpha));
+  border: 3px solid var(--accent_inactive);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  transition: var(--hover-transition);
+}
+
+.notification-row .notification-background .notification:hover {
+  background: var(--noti-bg-hover);
+  box-shadow:
+    0 0 0 1.5px var(--accent),
+    0 8px 18px rgba(0,0,0,0.45);
+}
+
+.notification-row:focus {
+  background: var(--noti-bg-focus);
+}
+
+.notification.critical {
+  box-shadow:
+    0 0 0 1.5px var(--danger),
+    0 8px 18px rgba(0,0,0,0.45);
+}
+
+/* --- Texts --- */
+.summary {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: var(--font-size-summary);
+}
+.body {
+  color: var(--text-color);
+  opacity: 0.9;
+  font-size: var(--font-size-body);
+}
+
+/* --- Close button --- */
+.close-button {
+  background: var(--noti-close-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 999px;
+  min-width: 24px;
+  min-height: 24px;
+}
+.close-button:hover { background: var(--noti-close-bg-hover); }
+
+/* --- Progressbars --- */
+progressbar trough { background-color: rgba(255,255,255,0.06); border-radius: 6px; }
+progressbar progress { background-color: var(--accent); border-radius: 6px; }
+
+/* --- Widgets --- */
+.widget {
+  margin: 8px;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  background: rgba(25,27,35,0.55);
+}
+.widget:hover { background: var(--noti-bg-hover); }
+
+.blank-window, .floating-notifications { background: transparent; }
+
