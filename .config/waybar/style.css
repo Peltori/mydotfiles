@@ -69,7 +69,10 @@ button:hover {
     background-color: @danger;
 }
 
-#left, #window, #right {
+#left,
+#window,
+#mpris,
+#right {
     border: 3px solid @accent;
     border-radius: 15px;
 }
@@ -90,9 +93,12 @@ button:hover {
 #left   {
     margin-right: 4px;
 }
+
+#mpris,
 #window {
     margin: 0 4px;
 }
+
 #right {
     margin-left: 4px;
 }
@@ -100,6 +106,8 @@ button:hover {
 #left, #right {
     padding: 0 10px;
 }
+
+#mpris,
 #window {
     padding-left: 10px; padding-right: 10px;
 }
@@ -116,6 +124,7 @@ button:hover {
 
 #left,
 #window,
+#mpris,
 #right,
 #tray,
 #clock,
