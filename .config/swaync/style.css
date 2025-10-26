@@ -69,6 +69,7 @@ notificationwindow, blankwindow, blankwindow { background: transparent; }
 }
 
 .notification-row .notification-background .notification {
+  padding: 5px;
   background: rgba(var(--noti-bg), var(--noti-bg-alpha));
   border: 3px solid var(--accent_inactive);
   border-radius: var(--border-radius);
@@ -101,6 +102,7 @@ notificationwindow, blankwindow, blankwindow { background: transparent; }
 }
 .body {
   color: var(--text-color);
+  padding: 3px;
   opacity: 0.9;
   font-size: var(--font-size-body);
 }
