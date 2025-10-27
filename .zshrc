@@ -151,7 +151,8 @@ ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias osrs="cd Games/osrs && ./RuneLite.AppImage"
-
+alias hero="~/./Downloads/Heroic-2.18.1-linux-x86_64.AppImage"
+alias godot="~/./Games/Godot/Godot_v4.5.1-stable_linux.x86_64"
 backup-fedora() {
   sudo rsync -azXvP --delete \
   --exclude-from="/home/peltori/exclude-file.txt" \
