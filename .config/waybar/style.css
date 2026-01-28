@@ -129,6 +129,7 @@ button:hover {
 #tray,
 #clock,
 #memory,
+#cpu,
 #pulseaudio,
 #custom-power {
     background-color: @overlay;
@@ -162,6 +163,7 @@ label:focus {
 #custom-media,/* not in use */
 #pulseaudio,
 #memory,
+#cpu,
 #tray {
     padding: 0 10px;
 }
