@@ -135,7 +135,8 @@
         },
         "ignored-players": [
             "firefox",
-            "librewolf"
+            "librewolf",
+            "vivaldi"
         ]
     },
 
